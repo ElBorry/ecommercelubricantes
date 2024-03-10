@@ -4,7 +4,7 @@ class UserManager {
   // solo se utiliza un array vacio para almacenar a los usuarios.
   constructor() {
     this._users = [];
-    this._nextUserId = 0;
+    this._nextUserId = 1;
   }
 
   //Metodo de adición o creación de usuarios mediante el parametro de data
