@@ -1,21 +1,19 @@
 # CoderHouse_BackEnd
  Repositorio de Desafios & Pre-Entregas del Curso de BackEnd. #Comisión 53135
-# Gestor de Productos
+# Sistema de Gestión de Productos y Usuarios
 
-El Gestor de Productos es una herramienta diseñada para facilitar la administración de productos dentro de una empresa o proyecto. Permite agregar, listar y gestionar productos de manera eficiente.
+Este proyecto proporciona una solución integral para la gestión de productos y usuarios, facilitando las operaciones de añadir y listar tanto productos como usuarios en un sistema. Está diseñado para ser utilizado en entornos donde se requiere mantener un registro actualizado de inventario de productos y una base de datos de usuarios, como empresas o proyectos en línea.
 
 ## Características
 
-- **Agregar Productos**: Permite ingresar nuevos productos al sistema con toda su información relevante.
-- **Listar Productos**: Proporciona una vista de todos los productos disponibles en el sistema.
+- **Gestión de Productos**: Agrega y lista productos en el sistema con detalles como título, foto, categoría, precio y stock.
+- **Gestión de Usuarios**: Permite la creación y listado de usuarios, almacenando información relevante como foto, email, contraseña y rol.
 
 ## Comenzando
 
-Para empezar a utilizar el Gestor de Productos, sigue estos pasos:
-
 ### Pre-requisitos
 
-Asegúrate de tener [Node.js](https://nodejs.org/) instalado en tu sistema.
+Antes de comenzar, asegúrate de tener [Node.js](https://nodejs.org/) instalado en tu sistema.
 
 ### Instalación
 
@@ -23,17 +21,42 @@ Asegúrate de tener [Node.js](https://nodejs.org/) instalado en tu sistema.
 2. Navega al directorio del proyecto:
 3. Instala las dependencias necesarias:
 
-### Uso
 
-Para agregar un producto al sistema, utiliza el siguiente comando, sustituyendo los valores de ejemplo por los datos del producto que deseas agregar:
+## Uso
+
+### Gestión de Productos
+
+Para agregar un producto al sistema, utiliza el siguiente código como ejemplo:
 
 ```javascript
 const gestorDeProductos = new ProductManager();
 
-gestorDeProductos.addProduct({
+gestorDeProductos.create({
 title: "Nombre del Producto",
 photo: "ruta/a/la/foto.jpg",
 category: "Categoría del Producto",
 price: precio,
 stock: cantidadEnStock,
 });
+
+Para obtener una lista de todos los productos registrados en el sistema:
+
+console.log(gestorDeProductos.read());
+
+### Gestión de Usuarios
+
+Para agregar un usuario al sistema, utiliza el siguiente código como ejemplo:
+
+const userManager = new UserManager();
+
+userManager.createUser({
+  photo: "ruta/a/la/foto.jpg",
+  email: "usuario@example.com",
+  password: "contraseñaSegura",
+  role: "administrador",
+});
+
+Para obtener una lista de todos los usuarios registrados en el sistema:
+
+console.log(userManager.readUsers());
+
