@@ -43,10 +43,13 @@ Para obtener una lista de todos los productos registrados en el sistema:
 
 console.log(gestorDeProductos.read());
 
+## Uso
+
 ### Gestión de Usuarios
 
 Para agregar un usuario al sistema, utiliza el siguiente código como ejemplo:
 
+```javascript
 const userManager = new UserManager();
 
 userManager.createUser({
