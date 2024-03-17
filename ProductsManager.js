@@ -1,21 +1,26 @@
 class ProductManager {
-  static #products = [];
+  static #products = []; 
+
   create(data) {
-    const products = {
-      id:
-        ProductManager.#products.length === 0
-          ? 1
-          : ProductManager.#products[ProductManager.#products.length - 1].id +
-            1,
+    if (!data.title || !data.photo || !data.category || data.price == null || data.stock == null) {
+      console.error("Todos los campos son obligatorios, excepto el id.");
+      return;
+    }
+
+    const newProduct = {
+      id: ProductManager.#products.length > 0 ? ProductManager.#products[ProductManager.#products.length - 1].id + 1 : 1,
       title: data.title,
       photo: data.photo,
       category: data.category,
       price: data.price,
       stock: data.stock,
     };
-    ProductManager.#products.push(products);
-    console.log("producto creado");
+
+    ProductManager.#products.push(newProduct);
+    console.log("Producto creado con éxito");
   }
+
+
   read() {
     return ProductManager.#products;
   }
