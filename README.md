@@ -24,7 +24,7 @@ Antes de comenzar, asegúrate de tener [Node.js](https://nodejs.org/) instalado 
 
 ## Uso
 
-### Gestión de Productos
+### Gestión de Productos y Gestión de Usuarios
 
 Para agregar un producto al sistema, utiliza el siguiente código como ejemplo:
 
@@ -43,13 +43,6 @@ Para obtener una lista de todos los productos registrados en el sistema:
 
 console.log(gestorDeProductos.read());
 
-## Uso
-
-### Gestión de Usuarios
-
-Para agregar un usuario al sistema, utiliza el siguiente código como ejemplo:
-
-```javascript
 const userManager = new UserManager();
 
 userManager.createUser({
