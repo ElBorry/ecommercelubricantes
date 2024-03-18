@@ -1,0 +1,82 @@
+[
+  {
+    "id": "4c58cc7f7d00b9574926172b",
+    "title": "Producto 1",
+    "photo": "..",
+    "category": "Lubricantes",
+    "price": 100,
+    "stock": 10
+  },
+  {
+    "id": "59aebe726e1cec341e302be8",
+    "title": "Producto 2",
+    "photo": "..",
+    "category": "Lubricantes",
+    "price": 200,
+    "stock": 20
+  },
+  {
+    "id": "8961e6f47640fbae9c8143c9",
+    "title": "Producto 3",
+    "photo": "..",
+    "category": "Lubricantes",
+    "price": 200,
+    "stock": 20
+  },
+  {
+    "id": "d5a7f20ac6c54bdafcd78fca",
+    "title": "Producto 4",
+    "photo": "..",
+    "category": "Lubricantes",
+    "price": 200,
+    "stock": 20
+  },
+  {
+    "id": "cbd32c800174aa96aaf67ee1",
+    "title": "Producto 5",
+    "photo": "..",
+    "category": "Lubricantes",
+    "price": 200,
+    "stock": 20
+  },
+  {
+    "id": "253e1db3fe2306cac51fcfa1",
+    "title": "Producto 6",
+    "photo": "..",
+    "category": "Lubricantes",
+    "price": 200,
+    "stock": 20
+  },
+  {
+    "id": "f9ffa3cfaca75a9fd396d82a",
+    "title": "Producto 7",
+    "photo": "..",
+    "category": "Lubricantes",
+    "price": 200,
+    "stock": 20
+  },
+  {
+    "id": "a1b47639ead87c8b8469434b",
+    "title": "Producto 8",
+    "photo": "..",
+    "category": "Lubricantes",
+    "price": 200,
+    "stock": 20
+  },
+  {
+    "id": "1dcc4df03cebc9ace27be4b2",
+    "title": "Producto 9",
+    "photo": "..",
+    "category": "Lubricantes",
+    "price": 200,
+    "stock": 20
+  },
+  {
+    "id": "1f2aa9be2b76df1607746391",
+    "title": "Producto 10",
+    "photo": "..",
+    "category": "Lubricantes",
+    "price": 200,
+    "stock": 20
+  }
+]
