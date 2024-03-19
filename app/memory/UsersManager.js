@@ -1,13 +1,12 @@
-const crypto = require('crypto');
-
 class UsersManager {
   constructor() {
     this.users = [];
+    this.nextId = 1;
   }
 
   create(data) {
     const user = {
-      id: crypto.randomBytes(12).toString('hex'),
+      id: this.nextId++,
       photo: data.photo,
       email: data.email,
       password: data.password,
@@ -50,17 +49,6 @@ class UsersManager {
     console.log('Usuario eliminado correctamente.');
     return deletedUser;
   }
-
-  update(id, data) {
-    const userIndex = this.users.findIndex((u) => u.id === id);
-    if (userIndex === -1) {
-      console.log('Usuario no encontrado');
-      return null;
-    }
-    this.users[userIndex] = { ...this.users[userIndex], ...data };
-    console.log('Usuario actualizado correctamente.');
-    return this.users[userIndex];
-  }
 }
 
 const gestorDeUsuarios = new UsersManager();
@@ -71,7 +59,27 @@ gestorDeUsuarios.create({
   role: 'user',
 });
 
+gestorDeUsuarios.create({
+  photo: 'photo.jpg',
+  email: 'carlos@example.com',
+  password: 'password',
+  role: 'user',
+});
+
+gestorDeUsuarios.create({
+  photo: 'photo.jpg',
+  email: 'manuel@example.com',
+  password: 'password',
+  role: 'user',
+});
+
+gestorDeUsuarios.create({
+  photo: 'photo.jpg',
+  email: 'toni@example.com',
+  password: 'password',
+  role: 'user',
+});
+
 console.log('Usuarios:', gestorDeUsuarios.read());
-console.log('Usuario con id "123":', gestorDeUsuarios.readOne('123'));
-console.log('Usuario eliminado:', gestorDeUsuarios.destroy('123'));
-console.log('Usuarios actualizados:', gestorDeUsuarios.update('123', { role: 'admin' }));
+console.log('Usuario con id 1:', gestorDeUsuarios.readOne(1)); // Cambio de id a numérico
+console.log('Usuario eliminado:', gestorDeUsuarios.destroy(1)); // Cambio de id a numérico
