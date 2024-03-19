@@ -1,15 +1,11 @@
-//Definimos las "importaciones"
 const fs = require("fs");
 const crypto = require("crypto");
 
-//Inicializamos la clase para gestionar a los usuarios
 class UsersManager {
   constructor() {
-    //En el constructor, definimos la ruta y la almacenamos en una variable.
-    this.filePath = "./users.json";
+    this.filePath = "./files/users.json";
   }
 
-  //Creamos el metodo de creación
   create(data) {
     const user = {
       id: crypto.randomBytes(12).toString("hex"),
@@ -26,30 +22,16 @@ class UsersManager {
         );
       }
 
-      fs.readFile(this.filePath, "utf-8", (error, jsonData) => {
-        if (error) {
-          throw new Error("Error al leer el archivo de usuarios");
-        }
+      let jsonData = fs.readFileSync(this.filePath, "utf-8");
+      let users = [];
+      if (jsonData) {
+        users = JSON.parse(jsonData);
+      }
 
-        let users = [];
-        if (jsonData) {
-          users = JSON.parse(jsonData);
-        }
+      users.push(user);
 
-        users.push(user);
-
-        fs.writeFile(
-          this.filePath,
-          JSON.stringify(users, null, 2),
-          (writeError) => {
-            if (writeError) {
-              throw new Error("Error al escribir en el archivo de usuarios");
-            }
-
-            console.log("Usuario creado correctamente.");
-          }
-        );
-      });
+      fs.writeFileSync(this.filePath, JSON.stringify(users, null, 2));
+      console.log("Usuario creado correctamente.");
     } catch (error) {
       console.log("Error al crear usuario:", error.message);
     }
@@ -97,22 +79,6 @@ class UsersManager {
       return null;
     }
   }
-
-  update(id, data) {
-    try {
-      const jsonData = fs.readFileSync(this.filePath, "utf-8");
-      let users = JSON.parse(jsonData);
-      const userIndex = users.findIndex((u) => u.id === id);
-      if (userIndex === -1) {
-        throw new Error("Usuario no encontrado");
-      }
-      users[userIndex] = { ...users[userIndex], ...data };
-      fs.writeFileSync(this.filePath, JSON.stringify(users, null, 2));
-      console.log("Usuario actualizado correctamente.");
-    } catch (error) {
-      console.log("Error al actualizar usuario:", error.message);
-    }
-  }
 }
 
 const gestorDeUsuarios = new UsersManager();
@@ -124,30 +90,32 @@ gestorDeUsuarios.create({
 });
 
 gestorDeUsuarios.create({
-    photo: "photo.jpg",
-    email: "carlosrestrepo@example.com",
-    password: "password",
-    role: "user",
-  });
+  photo: "photo.jpg",
+  email: "carlosrestrepo@example.com",
+  password: "password",
+  role: "user",
+});
 
-  gestorDeUsuarios.create({
-    photo: "photo.jpg",
-    email: "manuelcaceres@example.com",
-    password: "password",
-    role: "user",
-  });
+gestorDeUsuarios.create({
+  photo: "photo.jpg",
+  email: "manuelcaceres@example.com",
+  password: "password",
+  role: "user",
+});
 
-  gestorDeUsuarios.create({
-    photo: "photo.jpg",
-    email: "tonikroos@example.com",
-    password: "password",
-    role: "user",
-  });
+gestorDeUsuarios.create({
+  photo: "photo.jpg",
+  email: "tonikroos@example.com",
+  password: "password",
+  role: "user",
+});
 
-console.log("Usuarios:", gestorDeUsuarios.read());
-console.log('Usuario con id "123":', gestorDeUsuarios.readOne("123"));
-console.log("Usuario eliminado:", gestorDeUsuarios.destroy("123"));
-console.log(
-  "Usuarios actualizados:",
-  gestorDeUsuarios.update("123", { role: "admin" })
-);
+//Los metodos utilizan una variable, para tomar el primer usuario creado y realizar los ejemplos de lectura unica y eliminación unica
+
+const users = gestorDeUsuarios.read();
+console.log("Usuarios:", users);
+
+const userId = users[0].id;
+console.log(`Usuario con id "${userId}":`, gestorDeUsuarios.readOne(userId));
+
+console.log("Usuario eliminado:", gestorDeUsuarios.destroy(userId));
