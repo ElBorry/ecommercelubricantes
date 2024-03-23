@@ -24,28 +24,51 @@ Antes de comenzar, asegúrate de tener [Node.js](https://nodejs.org/) instalado 
 1. Clona el repositorio en tu máquina local usando `git clone <url-del-repositorio>`.
 2. Navega al directorio del proyecto con `cd CoderHouse_BackEnd`.
 3. Instala las dependencias necesarias con `npm install`.
+4. Inicia el servidor: npm start
+
+El servidor debería estar corriendo y accesible en `http://localhost:3000`.
 
 ## Uso
 
-### Gestión de Productos
+Este proyecto ofrece una API para gestionar productos y usuarios. A continuación, se detallan los endpoints disponibles y cómo utilizarlos.
 
-Para agregar un producto al sistema, utiliza el siguiente código como ejemplo:
+### ProductsManager
 
-```javascript
-const ProductManager = require('./path/to/ProductManager');
+La gestión de productos se realiza a través de los siguientes endpoints:
 
-const gestorDeProductos = new ProductManager();
+- **Crear un Producto**: `POST /api/products`
+- Body ejemplo:
+ ```json
+ {
+   "name": "Cafetera",
+   "price": 2500,
+   "description": "Cafetera automática con molinillo integrado."
+ }
+ ```
+- **Leer Productos**: `GET /api/products`
+- No requiere body.
+- **Actualizar un Producto**: `PUT /api/products/:id`
+- Body ejemplo:
+ ```json
+ {
+   "name": "Cafetera Actualizada",
+   "price": 3000,
+   "description": "Cafetera automática con molinillo y temporizador."
+ }
+ ```
+- **Eliminar un Producto**: `DELETE /api/products/:id`
+- No requiere body.
 
-gestorDeProductos.create({
-  title: "Nombre del Producto",
-  photo: "ruta/a/la/foto.jpg",
-  category: "Categoría del Producto",
-  price: precio,
-  stock: cantidadEnStock,
-});
+### UsersManager
 
-// Para obtener una lista de todos los productos registrados en el sistema:
-console.log(gestorDeProductos.read());
+_Esta sección está en proceso de creación por Esteban Samaniego y se actualizará próximamente con detalles sobre cómo gestionar usuarios._
 
-Gestión de Usuarios
-(NOTA: Esta sección será completada por Esteban Samaniego, quien está a cargo de la gestión de usuarios)
+## Contribuyendo
+
+Si deseas contribuir a este proyecto, por favor haz un fork del repositorio y crea una pull request con tus cambios. Las contribuciones son bienvenidas y apreciadas.
+
+
+## Agradecimientos
+
+- A CoderHouse por la oportunidad de aprender y desarrollar este proyecto.
+- A todos los que contribuyeron con código, ideas o sugerencias.
