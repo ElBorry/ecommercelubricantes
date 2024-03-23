@@ -51,7 +51,20 @@ class ProductsManager {
             console.error('Error escribiendo el archivo:', error.message);
         }
     }
-
+    read(category = null) {
+        try {
+            const products = this.readFileSync();
+            // Si se proporciona una categoría, filtrar los productos por esa categoría.
+            if (category) {
+                return products.filter(product => product.category === category);
+            }
+            // De lo contrario, devolver todos los productos.
+            return products;
+        } catch (error) {
+            console.error('Error al leer los productos:', error.message);
+            return [];
+        }
+    }
     create(data) {
         try {
             if (!data.title || !data.photo || !data.category || data.price == null || data.stock == null) {
