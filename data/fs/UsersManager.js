@@ -3,13 +3,13 @@ import crypto from "crypto";
 
 class UsersManager {
   constructor() {
-    this.filePath = './files/users.json';
+    this.filePath = "./files/users.json";
   }
 
   create(data) {
     const user = {
       id: crypto.randomBytes(12).toString("hex"),
-      photo: data.photo || "default.jpg",
+      photo: data.photo || "profilepic.jpg",
       email: data.email,
       password: data.password,
       role: data.role || "Guest",
@@ -81,43 +81,52 @@ class UsersManager {
   }
 }
 
-const gestorDeUsuarios = new UsersManager();
-gestorDeUsuarios.create({
-  photo: "photo.jpg",
-  email: "juanarizona@example.com",
-  password: "password",
-  role: "user",
-});
+// Se han comentado la inicialización en esta clase para evitar la creación continua mediante el debug de metodos que se 
+//realizo en el Sprint 1 y Sprint 2.
 
-gestorDeUsuarios.create({
-  photo: "photo.jpg",
-  email: "carlosrestrepo@example.com",
-  password: "password",
-  role: "user",
-});
 
-gestorDeUsuarios.create({
-  photo: "photo.jpg",
-  email: "manuelcaceres@example.com",
-  password: "password",
-  role: "user",
-});
+// const gestorDeUsuarios = new UsersManager();
+// gestorDeUsuarios.create({
+//   photo: "photo.jpg",
+//   email: "juanarizona@example.com",
+//   password: "password",
+//   role: "user",
+// });
 
-gestorDeUsuarios.create({
-  photo: "photo.jpg",
-  email: "tonikroos@example.com",
-  password: "password",
-  role: "user",
-});
+// gestorDeUsuarios.create({
+//   photo: "photo.jpg",
+//   email: "carlosrestrepo@example.com",
+//   password: "password",
+//   role: "user",
+// });
 
-//Los metodos utilizan una variable, para tomar el primer usuario creado y realizar los ejemplos de lectura unica y eliminación unica
+// gestorDeUsuarios.create({
+//   photo: "photo.jpg",
+//   email: "manuelcaceres@example.com",
+//   password: "password",
+//   role: "user",
+// });
 
-const users = gestorDeUsuarios.read();
-console.log("Usuarios:", users);
+// gestorDeUsuarios.create({
+//   photo: "photo.jpg",
+//   email: "tonikroos@example.com",
+//   password: "password",
+//   role: "user",
+// });
 
-const userId = users[0].id;
-console.log(`Usuario con id "${userId}":`, gestorDeUsuarios.readOne(userId));
+// //Los metodos utilizan una variable, para tomar el primer usuario creado y realizar los ejemplos de lectura unica y eliminación unica
 
-console.log("Usuario eliminado:", gestorDeUsuarios.destroy(userId));
+// const users = gestorDeUsuarios.read();
+// console.log("Usuarios:", users);
+
+// if (users.length > 0) {
+//   const userId = users[0].id;
+//   console.log(`Usuario con id "${userId}":`, gestorDeUsuarios.readOne(userId));
+//   console.log("Usuario eliminado:", gestorDeUsuarios.destroy(userId));
+// } else {
+//   console.log("No hay usuarios creados.");
+// }
+
+// // console.log("Usuario eliminado:", gestorDeUsuarios.destroy(userId));
 
 export default UsersManager;

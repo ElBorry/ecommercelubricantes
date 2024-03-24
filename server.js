@@ -85,14 +85,13 @@ app.listen(PORT, () => {
 
 //Feature de UserManager
 
-const usersManager = new UsersManager();
+const userManager = new UsersManager();
 
-// Ruta para obtener todos los usuarios, con opción de filtrar por rol
 app.get('/api/users', (req, res) => {
-    let users = UserManager.read();
+    let users = userManager.read();
 
     // Filtrar por rol si se proporciona la query "role"
-    const role = req.query.role;
+    const role = req.query.role || "Guest";
     if (role) {
       users = users.filter(user => user.role === role);
     }
@@ -114,8 +113,8 @@ app.get('/api/users', (req, res) => {
 
 // Ruta para obtener un usuario por su ID
 app.get('/api/users/:uid', (req, res) => {
-    const userId = req.params.uid;
-    const user = UserManager.readOne(userId);
+    const userId = 'b718f2911821e780a43ff7f0'; // Usuario fijo
+    const user = userManager.readOne(userId);
     if (user) {
       res.status(200).json({
         statusCode: 200,
@@ -128,4 +127,5 @@ app.get('/api/users/:uid', (req, res) => {
         message: 'Usuario no encontrado'
       });
     }
-  });
+});
+

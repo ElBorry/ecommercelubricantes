@@ -1,3 +1,23 @@
 [
-
-  ]
+  {
+    "id": "b718f2911821e780a43ff7f0",
+    "photo": "photo.jpg",
+    "email": "carlosrestrepo@example.com",
+    "password": "password",
+    "role": "user"
+  },
+  {
+    "id": "ffcee4265f1a87e0163c1257",
+    "photo": "photo.jpg",
+    "email": "manuelcaceres@example.com",
+    "password": "password",
+    "role": "user"
+  },
+  {
+    "id": "b33b10c6a55c0a9b27f489ec",
+    "photo": "photo.jpg",
+    "email": "tonikroos@example.com",
+    "password": "password",
+    "role": "user"
+  }
+]
