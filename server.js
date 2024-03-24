@@ -1,12 +1,13 @@
 import express from 'express';
-import ProductsManager from './app/fs/ProductsManager.js';
+import ProductsManager from './data/fs/ProductsManager.js';
+import UsersManager from './data/fs/UsersManager.js';
 
 const app = express();
 const PORT = 3000;
 
 app.use(express.json()); 
 
-
+//Feature de ProductsManager
 const productsManager = new ProductsManager();
 
 
@@ -80,3 +81,51 @@ app.delete('/api/products/:id', async (req, res) => {
 app.listen(PORT, () => {
     console.log(`Servidor corriendo en http://localhost:${PORT}`);
 });
+
+
+//Feature de UserManager
+
+const usersManager = new UsersManager();
+
+// Ruta para obtener todos los usuarios, con opción de filtrar por rol
+app.get('/api/users', (req, res) => {
+    let users = UserManager.read();
+
+    // Filtrar por rol si se proporciona la query "role"
+    const role = req.query.role;
+    if (role) {
+      users = users.filter(user => user.role === role);
+    }
+
+    if (users.length > 0) {
+      res.status(200).json({
+        statusCode: 200,
+        response: users
+      });
+    } else {
+      res.status(404).json({
+        statusCode: 404,
+        response: null,
+        message: 'No se encontraron usuarios'
+      });
+    }
+  });
+  
+
+// Ruta para obtener un usuario por su ID
+app.get('/api/users/:uid', (req, res) => {
+    const userId = req.params.uid;
+    const user = UserManager.readOne(userId);
+    if (user) {
+      res.status(200).json({
+        statusCode: 200,
+        response: user
+      });
+    } else {
+      res.status(404).json({
+        statusCode: 404,
+        response: null,
+        message: 'Usuario no encontrado'
+      });
+    }
+  });
