@@ -50,18 +50,19 @@ class UsersManager {
 
   readOne(id) {
     try {
-      const jsonData = fs.readFileSync(this.filePath, "utf-8");
-      const users = JSON.parse(jsonData);
-      const user = users.find((u) => u.id === id);
-      if (!user) {
-        throw new Error("Usuario no encontrado");
-      }
-      return user;
+        const jsonData = fs.readFileSync(this.filePath, "utf-8");
+        const users = JSON.parse(jsonData);
+        const user = users.find((u) => u.id === id);
+        if (!user) {
+            throw new Error("Usuario no encontrado");
+        }
+        return user;
     } catch (error) {
-      console.log("Error al buscar usuario:", error.message);
-      return null;
+        console.log("Error al buscar usuario:", error.message);
+        return null;
     }
-  }
+}
+
 
   destroy(id) {
     try {

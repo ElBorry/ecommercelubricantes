@@ -1,23 +1,30 @@
 [
   {
-    "id": "b718f2911821e780a43ff7f0",
-    "photo": "photo.jpg",
-    "email": "carlosrestrepo@example.com",
+    "id": "1a2b3c4d5e6f7g8h9i0j",
+    "photo": "ownerphoto.jpg",
+    "email": "admin@example.com",
     "password": "password",
-    "role": "user"
+    "role": "Owner"
   },
   {
-    "id": "ffcee4265f1a87e0163c1257",
-    "photo": "photo.jpg",
-    "email": "manuelcaceres@example.com",
+    "id": "a1b2c3d4e5f6g7h8i9j0",
+    "photo": "supervisorphoto.jpg",
+    "email": "supervisor@example.com",
     "password": "password",
-    "role": "user"
+    "role": "Supervisor"
   },
   {
-    "id": "b33b10c6a55c0a9b27f489ec",
-    "photo": "photo.jpg",
-    "email": "tonikroos@example.com",
+    "id": "0a1b2c3d4e5f6g7h8i9j",
+    "photo": "guest1photo.jpg",
+    "email": "guest1@example.com",
     "password": "password",
-    "role": "user"
+    "role": "Guest"
+  },
+  {
+    "id": "j9i8h7g6f5e4d3c2b1a0",
+    "photo": "guest2photo.jpg",
+    "email": "guest2@example.com",
+    "password": "password",
+    "role": "Guest"
   }
 ]
