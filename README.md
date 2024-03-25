@@ -1,17 +1,16 @@
 # CoderHouse_BackEnd
+ Repositorio de Desafios & Pre-Entregas del Curso de BackEnd. #Comisión 53135
 
-Repositorio de Desafíos & Pre-Entregas del Curso de BackEnd. #Comisión 53135
+ Contribución de Francisco Borriello y Esteban Samaniego
 
-Contribución de Francisco Borriello y Esteban Samaniego
-
-## Sistema de Gestión de Productos y Usuarios
+# Sistema de Gestión de Productos y Usuarios
 
 Este proyecto proporciona una solución integral para la gestión de productos y usuarios, facilitando las operaciones de añadir y listar tanto productos como usuarios en un sistema. Está diseñado para ser utilizado en entornos donde se requiere mantener un registro actualizado de inventario de productos y una base de datos de usuarios, como empresas o proyectos en línea.
 
 ## Características
 
 - **Gestión de Productos**: Agrega y lista productos en el sistema con detalles como título, foto, categoría, precio y stock.
-- **Gestión de Usuarios**: Permite la creación y listado de usuarios, almacenando información relevante como foto, email, contraseña y rol.
+- **Gestión de Usuarios**: Permite la creación y lectura de usuarios, almacenando información relevante como foto, email, contraseña y rol.
 
 ## Comenzando
 
