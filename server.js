@@ -96,16 +96,16 @@ app.get('/api/users/:uid', async (req, res) => {
 });
 
 
-app.get('/api/users', async (req, res) => {
+app.get('/api/users/:role?', async (req, res) => {
     try {
-        const { rol } = req.query;
+        const userRole = req.params.role;
         let users = await userManager.read();
 
-        if (rol) {
-            users = users.filter(user => user.rol === rol);
+        if (userRole) {
+            users = users.filter(user => user.role === userRole);
         }
 
-        if (users.length > 0) {
+        if (users.length > 0 || !userRole) {
             res.status(200).json({
                 statusCode: 200,
                 response: users
@@ -121,6 +121,10 @@ app.get('/api/users', async (req, res) => {
         res.status(500).json({ message: error.message });
     }
 });
+
+
+
+
 
 
 
