@@ -3,7 +3,7 @@ import crypto from "crypto";
 
 class UsersManager {
   constructor() {
-    this.filePath = "./files/users.json";
+    this.filePath = "./data/fs/files/users.json";
   }
 
   create(data) {
@@ -52,7 +52,7 @@ class UsersManager {
     try {
         const jsonData = fs.readFileSync(this.filePath, "utf-8");
         const users = JSON.parse(jsonData);
-        const user = users.find((u) => u.id === id);
+        const user = users.find((u) => u.id == id);
         if (!user) {
             throw new Error("Usuario no encontrado");
         }
