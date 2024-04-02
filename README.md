@@ -1,34 +1,34 @@
-# Entrega de Desafios & Pre-Entregas del Curso Back End de CoderHouse
- Repositorio de Desafios & Pre-Entregas del Curso de BackEnd. #Comisión 53135
+# Entrega de Desafíos & Pre-Entregas del Curso Back End de CoderHouse
 
- Autores: Francisco Borriello & Esteban Samaniego
+Repositorio de Desafíos & Pre-Entregas del Curso de BackEnd. #Comisión 53135
 
-# ¿Qué veremos en este repositorio?
+Autores: Francisco Borriello & Esteban Samaniego
 
-Como se ha indicado anteriormente, este repositorio alberga codigo correspondiente a los desafios y pre-entregas del curso de Coderhouse para el aprendizaje de tecnología BackEnd. Hasta el momento, cada uno de los involucrados trabaja un feat especifico. Borriello, se enfoca en aquellas asignaturas que van dirigidas al manejo de productos mientras que Samaniego lo hará para la parte de usuarios.
+## ¿Qué veremos en este repositorio?
 
-# Sistema de Gestión de Productos y Usuarios
-Este proyecto proporciona una solución integral para la gestión de productos y usuarios, facilitando las operaciones de añadir y listar tanto productos como usuarios en un sistema. Está diseñado para ser utilizado en entornos donde se requiere mantener un registro actualizado de inventario de productos y una base de datos de usuarios, como empresas o proyectos en línea.
+Como se ha indicado anteriormente, este repositorio alberga código correspondiente a los desafíos y pre-entregas del curso de Coderhouse para el aprendizaje de tecnología BackEnd. Hasta el momento, cada uno de los involucrados trabaja un feat específico. Borriello se enfoca en aquellas asignaturas que van dirigidas al manejo de productos, mientras que Samaniego lo hace para la parte de usuarios.
 
-## Características
-- **Gestión de Productos**: Agrega y lista productos en el sistema con detalles como título, foto, categoría, precio y stock.
-- **Gestión de Usuarios**: Permite la creación y lectura de usuarios, almacenando información relevante como foto, email, contraseña y rol.
+## Sistema de Gestión de Productos y Usuarios
+
+Este proyecto proporciona una solución integral para la gestión de productos y usuarios, facilitando las operaciones de añadir, listar, actualizar y eliminar tanto productos como usuarios en un sistema. Está diseñado para ser utilizado en entornos donde se requiere mantener un registro actualizado de inventario de productos y una base de datos de usuarios, como empresas o proyectos en línea.
+
+### Características
+
+- **Gestión de Productos**: Agrega, lista, actualiza y elimina productos en el sistema con detalles como nombre, precio, descripción, categoría, precio y stock.
+- **Gestión de Usuarios**: Permite la creación, lectura, actualización y eliminación de usuarios, almacenando información relevante como foto, email, contraseña y rol.
 
 ## Comenzando
 
 ### Pre-requisitos o Dependencias
 
-Antes de comenzar, asegúrate de tener [Node.js](https://nodejs.org/) instalado en tu sistema, además de instalar otras dependencias como lo son "Nodemon" y Express.
+Antes de comenzar, asegúrate de tener [Node.js](https://nodejs.org/) instalado en tu sistema, además de instalar otras dependencias como "Nodemon" y Express.
 
-Puedes instalar estas dependencias desde la consola de tu IDE de preferencia, los comandos para instalación son estos respectivamente:
-
-Nodemon: 
+```bash
+# Nodemon:
 npm install -D nodemon
-npm i -D nodemon
-
-Express:
+# Express:
 npm install express
-npm i express
+
 
 ### Instalación
 
@@ -49,24 +49,24 @@ La gestión de productos se realiza a través de los siguientes endpoints:
 
 - **Crear un Producto**: `POST /api/products`
 - Body ejemplo:
- ```json
+ json
  {
    "name": "Cafetera",
    "price": 2500,
    "description": "Cafetera automática con molinillo integrado."
  }
- ```
-- **Leer Productos**: `GET /api/products`
+ 
+-**Leer Productos**: `GET /api/products`
 - No requiere body.
 - **Actualizar un Producto**: `PUT /api/products/:id`
 - Body ejemplo:
- ```json
+ json
  {
    "name": "Cafetera Actualizada",
    "price": 3000,
    "description": "Cafetera automática con molinillo y temporizador."
  }
- ```
+
 - **Eliminar un Producto**: `DELETE /api/products/:id`
 - No requiere body.
 
@@ -89,7 +89,6 @@ Esta solicitud filtrará el listao de usuarios en caso de recibir un "String" qu
 ## Contribuyendo
 
 Si deseas contribuir a este proyecto, por favor haz un fork del repositorio y crea una pull request con tus cambios. Las contribuciones son bienvenidas y apreciadas.
-
 
 ## Agradecimientos
 
