@@ -1,0 +1,322 @@
+[
+  {
+    "id": "dc8abb75608059ba52491646",
+    "title": "Product 1",
+    "photo": "default_product.jpg",
+    "category": "Default Category",
+    "price": 1,
+    "stock": 1
+  },
+  {
+    "id": "ad9a7b6a6e38350cb3b37653",
+    "title": "Product 2",
+    "photo": "default_product.jpg",
+    "category": "Default Category",
+    "price": 1,
+    "stock": 1
+  },
+  {
+    "id": "bd0e3e393d1914022bba444d",
+    "title": "Product 3",
+    "photo": "default_product.jpg",
+    "category": "Default Category",
+    "price": 1,
+    "stock": 1
+  },
+  {
+    "id": "9cbd8edf16fa6bb008083a13",
+    "title": "Product 4",
+    "photo": "default_product.jpg",
+    "category": "Default Category",
+    "price": 1,
+    "stock": 1
+  },
+  {
+    "id": "627cac12f762d294f5c85027",
+    "title": "Product 5",
+    "photo": "default_product.jpg",
+    "category": "Default Category",
+    "price": 1,
+    "stock": 1
+  },
+  {
+    "id": "d4abccf6474ec72b8e80efce",
+    "title": "Product 6",
+    "photo": "default_product.jpg",
+    "category": "Default Category",
+    "price": 1,
+    "stock": 1
+  },
+  {
+    "id": "548da0f5618bfaaea1b17e93",
+    "title": "Product 7",
+    "photo": "default_product.jpg",
+    "category": "Default Category",
+    "price": 1,
+    "stock": 1
+  },
+  {
+    "id": "92eeee387fa3177053d25eaf",
+    "title": "Product 8",
+    "photo": "default_product.jpg",
+    "category": "Default Category",
+    "price": 1,
+    "stock": 1
+  },
+  {
+    "id": "8dce3fee7bc719faa260ed83",
+    "title": "Product 9",
+    "photo": "default_product.jpg",
+    "category": "Default Category",
+    "price": 1,
+    "stock": 1
+  },
+  {
+    "id": "3565a7f6ba0007807b29a4cb",
+    "title": "Product 10",
+    "photo": "default_product.jpg",
+    "category": "Default Category",
+    "price": 1,
+    "stock": 1
+  },
+  {
+    "id": "01f117f3e5e81de24eab3d20",
+    "title": "Product 11",
+    "photo": "default_product.jpg",
+    "category": "Default Category",
+    "price": 1,
+    "stock": 1
+  },
+  {
+    "id": "2960a4c3b14c206dfc61df9e",
+    "title": "Product 12",
+    "photo": "default_product.jpg",
+    "category": "Default Category",
+    "price": 1,
+    "stock": 1
+  },
+  {
+    "id": "6f3c1564d4d515e199aa09cd",
+    "title": "Product 13",
+    "photo": "default_product.jpg",
+    "category": "Default Category",
+    "price": 1,
+    "stock": 1
+  },
+  {
+    "id": "11ede2fd649ea57761441039",
+    "title": "Product 14",
+    "photo": "default_product.jpg",
+    "category": "Default Category",
+    "price": 1,
+    "stock": 1
+  },
+  {
+    "id": "9e0c787f1b6d0767def93107",
+    "title": "Product 15",
+    "photo": "default_product.jpg",
+    "category": "Default Category",
+    "price": 1,
+    "stock": 1
+  },
+  {
+    "id": "806507b7641e362be03a1034",
+    "title": "Product 16",
+    "photo": "default_product.jpg",
+    "category": "Default Category",
+    "price": 1,
+    "stock": 1
+  },
+  {
+    "id": "64d139a82a69ce34f8d7507b",
+    "title": "Product 17",
+    "photo": "default_product.jpg",
+    "category": "Default Category",
+    "price": 1,
+    "stock": 1
+  },
+  {
+    "id": "e3568720db17e0c52ed83859",
+    "title": "Product 18",
+    "photo": "default_product.jpg",
+    "category": "Default Category",
+    "price": 1,
+    "stock": 1
+  },
+  {
+    "id": "9717fe3fc491deea8c50ba05",
+    "title": "Product 19",
+    "photo": "default_product.jpg",
+    "category": "Default Category",
+    "price": 1,
+    "stock": 1
+  },
+  {
+    "id": "c6a010a3d807ddc8f672fb80",
+    "title": "Product 20",
+    "photo": "default_product.jpg",
+    "category": "Default Category",
+    "price": 1,
+    "stock": 1
+  },
+  {
+    "id": "554b93414acf3cc4e49b86fc",
+    "title": "Product 21",
+    "photo": "default_product.jpg",
+    "category": "Default Category",
+    "price": 1,
+    "stock": 1
+  },
+  {
+    "id": "b0e983dab56c3e16309534b3",
+    "title": "Product 22",
+    "photo": "default_product.jpg",
+    "category": "Default Category",
+    "price": 1,
+    "stock": 1
+  },
+  {
+    "id": "029c8b8f43b935291b82baaa",
+    "title": "Product 23",
+    "photo": "default_product.jpg",
+    "category": "Default Category",
+    "price": 1,
+    "stock": 1
+  },
+  {
+    "id": "b3df930da58517cbe4adbea4",
+    "title": "Product 24",
+    "photo": "default_product.jpg",
+    "category": "Default Category",
+    "price": 1,
+    "stock": 1
+  },
+  {
+    "id": "1e851e5d88a54ffedb137883",
+    "title": "Product 25",
+    "photo": "default_product.jpg",
+    "category": "Default Category",
+    "price": 1,
+    "stock": 1
+  },
+  {
+    "id": "8c7baacdc2f1b1f43a5f1a31",
+    "title": "Product 26",
+    "photo": "default_product.jpg",
+    "category": "Default Category",
+    "price": 1,
+    "stock": 1
+  },
+  {
+    "id": "54358dc18a15f6c1d9d8eb8c",
+    "title": "Product 27",
+    "photo": "default_product.jpg",
+    "category": "Default Category",
+    "price": 1,
+    "stock": 1
+  },
+  {
+    "id": "8a4ba7e027aa8a621acec763",
+    "title": "Product 28",
+    "photo": "default_product.jpg",
+    "category": "Default Category",
+    "price": 1,
+    "stock": 1
+  },
+  {
+    "id": "fac9b9a239f50c274dd9d31b",
+    "title": "Product 29",
+    "photo": "default_product.jpg",
+    "category": "Default Category",
+    "price": 1,
+    "stock": 1
+  },
+  {
+    "id": "4a30e044f07867742ec428f7",
+    "title": "Product 30",
+    "photo": "default_product.jpg",
+    "category": "Default Category",
+    "price": 1,
+    "stock": 1
+  },
+  {
+    "id": "fe307b5d0dff08c74bbc36b2",
+    "title": "Product 31",
+    "photo": "default_product.jpg",
+    "category": "Default Category",
+    "price": 1,
+    "stock": 1
+  },
+  {
+    "id": "8b4bed21c5263b7a705bf063",
+    "title": "Product 32",
+    "photo": "default_product.jpg",
+    "category": "Default Category",
+    "price": 1,
+    "stock": 1
+  },
+  {
+    "id": "f99a23db9a0ebeaf50c36a9a",
+    "title": "Product 33",
+    "photo": "default_product.jpg",
+    "category": "Default Category",
+    "price": 1,
+    "stock": 1
+  },
+  {
+    "id": "b6703b2c8062582da26496f8",
+    "title": "Product 34",
+    "photo": "default_product.jpg",
+    "category": "Default Category",
+    "price": 1,
+    "stock": 1
+  },
+  {
+    "id": "f7b57cc74c2073ff88a0bb0a",
+    "title": "Product 35",
+    "photo": "default_product.jpg",
+    "category": "Default Category",
+    "price": 1,
+    "stock": 1
+  },
+  {
+    "id": "ea1e64aac7f259980282820b",
+    "title": "Product 36",
+    "photo": "default_product.jpg",
+    "category": "Default Category",
+    "price": 1,
+    "stock": 1
+  },
+  {
+    "id": "a5ffdca3b020fdf6c49a27b3",
+    "title": "Product 37",
+    "photo": "default_product.jpg",
+    "category": "Default Category",
+    "price": 1,
+    "stock": 1
+  },
+  {
+    "id": "9d544ec6cebe56503ee1d121",
+    "title": "Product 38",
+    "photo": "default_product.jpg",
+    "category": "Default Category",
+    "price": 1,
+    "stock": 1
+  },
+  {
+    "id": "dc04f15582b0b5358f9a5dd6",
+    "title": "Product 39",
+    "photo": "default_product.jpg",
+    "category": "Default Category",
+    "price": 1,
+    "stock": 1
+  },
+  {
+    "id": "cbffe233c32892c82be10823",
+    "title": "Product 40",
+    "photo": "default_product.jpg",
+    "category": "Default Category",
+    "price": 1,
+    "stock": 1
+  }
+]
