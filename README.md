@@ -2,7 +2,7 @@
 
 Repositorio de Desafíos & Pre-Entregas del Curso de BackEnd. #Comisión 53135
 
-Autores: Francisco Borriello & Esteban Samaniego
+Autor: Francisco Borriello
 
 ## ¿Qué veremos en este repositorio?
 
