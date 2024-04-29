@@ -10,9 +10,9 @@ class Manager {
       throw error;
     }
   }
-  async read(cat) {
+  async read(filter) {
     try {
-      const all = await this.Model.find();
+      const all = await this.Model.find(filter);
       return all;
     } catch (error) {
       throw error;

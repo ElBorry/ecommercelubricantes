@@ -1,6 +1,5 @@
 import { Router } from "express";
-//import usersManager from "../../data/fs/UsersManager.fs.js";
-import usersManager from "../../data/mongo/UsersManager.mongo.js";
+import usersManager from "../../data/mongo/manager/UsersManager.mongo.js";
 import isPhoto from '../../middlewares/isPhoto.js';
 import uploader from "../../middlewares/multer.mid.js";
 
