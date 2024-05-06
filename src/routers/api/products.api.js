@@ -5,6 +5,7 @@ import isText from "../../middlewares/isText.mid.js";
 const productsRouter = Router();
 
 productsRouter.get("/", read);
+productsRouter.get("/paginate", paginate);
 productsRouter.get("/:nid", readOne);
 productsRouter.post("/", isText, create);
 productsRouter.put("/:nid", update);
@@ -37,6 +38,35 @@ async function read(req, res, next) {
       error.statusCode = 404;
       throw error;
     }
+  } catch (error) {
+    return next(error);
+  }
+}
+
+async function paginate(req, res, next) {
+  try {
+    const filter = {};
+    const opts = {};
+    if (req.query.limit) {
+      opts.limit = req.query.limit
+    }
+    if (req.query.page) {
+      opts.page = req.query.page
+    }
+    if (red.query.user_Id) {
+      filter.user_Id = req.query.user_Id
+    }
+    const all = await productsManager.paginate({ filter, opts });
+    return res.json({
+      statusCode: 200,
+      response: all.docs,
+      info: {
+        page: all.page,
+        limit: all.limit,
+        prevPage: all.prevPage,
+        nextPage: all.nextPage,
+      }
+    });
   } catch (error) {
     return next(error);
   }

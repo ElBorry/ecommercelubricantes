@@ -10,18 +10,28 @@ class Manager {
       throw error;
     }
   }
-  async read(filter) {
+  async read(cat) {
     try {
-      const all = await this.Model.find(filter);
+      const all = await this.Model.find();
       return all;
     } catch (error) {
       throw error;
     }
   }
+
+  async paginate ({ filter, opts }) {
+    try {
+      const all = await this.Model.paginate(filter, opts);
+      return all;
+    } catch (error) {
+      throw error;
+    }
+  }
+
   async readOne(id) {
     try {
 
-      const one = await this.Model.findOne({ _id: id });
+      const one = await this.Model.findOne({ _Id: Id });
       return one;
     } catch (error) {
       throw error;
@@ -29,7 +39,7 @@ class Manager {
   }
   async update(id, data) {
     try {
-      const one = await this.Model.findByIdAndUpdate(id, data, { new: true });
+      const one = await this.Model.findByIdAndUpdate(Id, data, { new: true });
       return one;
     } catch (error) {
       throw error;
@@ -37,8 +47,16 @@ class Manager {
   }
   async destroy(id) {
     try {
-      const one = await this.Model.findByIdAndDelete(id);
+      const one = await this.Model.findByIdAndDelete(Id);
       return one;
+    } catch (error) {
+      throw error;
+    }
+  }
+  async aggregate (obj) {
+    try {
+      const result = await this.Model.aggregate(obj);
+      return result;
     } catch (error) {
       throw error;
     }
